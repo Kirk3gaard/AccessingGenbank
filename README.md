@@ -11,4 +11,6 @@ I have attached:
 - A function for downloading genbank files "fetch\_genbank\_function.py"
 - A function for parsing genbank files "parse\_genbank\_function.py"
 - an example file with genbank IDs "ACCESIOND_IDs.txt"
+An running the script with these files in the working directory should result in the
 - an example of the output file "source_list.txt"
+- a number of genbank files
