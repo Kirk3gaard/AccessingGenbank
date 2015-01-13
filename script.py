@@ -3,7 +3,7 @@
 Created on Tue Jan 06 11:43:12 2015
 
 @author: RasmusHKirkegaard
-Downloads all the genbank files that are classified as Hyd24-12 in Silva
+Downloads all the genbank files based on a file listing genbank IDs
 Parses all the files and extracts the source locations
 Creates a list with the unique source locations
 """
