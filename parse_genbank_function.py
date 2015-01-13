@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Oct 16 10:31:39 2014
-
 @author: RasmusHKirkegaard
 Parses genbank files and retrieves the unique values of a given field if available
 """
