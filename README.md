@@ -14,6 +14,6 @@ I have attached:
 - an example file with genbank IDs "ACCESIOND_IDs.txt"
 
 
-And running the "script.py" with these files in the working directory should result in:
+Running the "script.py" with these files in the working directory should result in:
 - an example of the output file "source_list.txt"
 - a number of genbank files
