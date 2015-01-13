@@ -9,11 +9,10 @@ I have tested the functionality in the Anaconda environment on a Windows PC (htt
 
 I have attached:
 - a file for running the workflow "script.py"
-- A function for downloading genbank files "fetch\_genbank\_function.py"
-- A function for parsing genbank files "parse\_genbank\_function.py"
+- A module with functions for downloading and parsing genbank files "Genbank_module.py"
 - an example file with genbank IDs "ACCESIOND_IDs.txt"
 
 
-And running the script with these files in the working directory should result in the:
+And running the "script.py" with these files in the working directory should result in:
 - an example of the output file "source_list.txt"
 - a number of genbank files
