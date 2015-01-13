@@ -3,7 +3,6 @@
 Created on Thu Dec 11 09:44:04 2014
 
 @author: RasmusHKirkegaard
-20150106 Working fine now
 """
 
 def fetch_genbankfile(filewgenbankids='ACCESSIONids.txt', output_location=""):
