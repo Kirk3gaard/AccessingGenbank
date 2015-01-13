@@ -9,9 +9,8 @@ Creates a list with the unique source locations
 filewgenbankids = "ACCESSION_IDs.txt"
 outputfilelocation=""
 
+import Genbank_module as gb
 
-from fetch_genbank_function import fetch_genbankfile
-fetch_genbankfile(filewgenbankids, outputfilelocation)
+gb.fetch_genbankfile(filewgenbankids, outputfilelocation)
 
-from parse_genbank_function import parse_genbank_function
-parse_genbank_function(filelist=filewgenbankids,field="isolation_source",outputfile='source_list.txt')
+gb.parse_genbank_function(filelist=filewgenbankids,field="isolation_source",outputfile='source_list.txt')
