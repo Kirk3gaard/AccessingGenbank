@@ -11,7 +11,7 @@ I have tested the functionality in the Anaconda environment on a Windows PC (htt
 I have attached:
 - A demo for running the workflow "script.py"
 - A module with functions for downloading and parsing genbank files "Genbank_module.py"
-- an example file with genbank IDs "ACCESION_IDs.txt"
+- an example file with genbank IDs "ACCESSION_IDs.txt"
 
 
 Running the "script.py" with these files in the working directory should result in:
