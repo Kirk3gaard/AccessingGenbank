@@ -26,10 +26,15 @@ def fetch_genbankfile(filewgenbankids='ACCESSIONids.txt', output_location=""):
         gbk_out_file = os.path.join(output_location, id + ".gb")
         if os.path.exists(gbk_out_file):
             print "already fetched"
-    
-        open(gbk_out_file, "w").write(urllib2.urlopen(url_template % id).read())
+            sleeptime=0
+        else:
+            try:
+                open(gbk_out_file, "w").write(urllib2.urlopen(url_template % id).read())
+                sleeptime=1.0/3 # It is not allowed to request more than 3 times pr second!!!
+            except Exception: 
+                pass
         print "Done"
-        time.sleep(1.0/3) # It is not allowed to request more than 3 times pr second!!!
+        time.sleep(sleeptime) # It is not allowed to request more than 3 times pr second!!!
         
 def parse_genbank_function(filelist='ACCESSIONids.txt',field="isolation_source",outputfile='output.txt'):
     """
