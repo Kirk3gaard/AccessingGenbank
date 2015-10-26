@@ -67,3 +67,18 @@ def parse_genbank_function(filelist='ACCESSIONids.txt',field="isolation_source",
       f.write("%s\n" % item)
     f.close()
     f1.close()
+
+
+def fetch_extractgenbankIDfromfastafile(input_fasta='my.fasta', output_file="GBIDs.txt"):
+    """
+    Function for extracting genbank IDs from a fasta file
+    assuming that the first 8 characters following the ">" sign is the 
+    Genbank ID
+    """
+    file1 = open(input_fasta, 'r')
+    file2 = open(output_file, "w")
+    for line in file1:
+        if (line[0]==">"):
+            file2.write(line[1:9]+"\n")
+    file1.close()
+    file2.close()
