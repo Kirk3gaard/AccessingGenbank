@@ -19,6 +19,5 @@ Running the "script.py" with these files in the working directory should result 
 - a number of genbank files
 
 
-
 A reminder
 "In order not to overload the E-utility servers, NCBI recommends that users post no more than three URL requests per second" - http://www.ncbi.nlm.nih.gov/books/NBK25497/
