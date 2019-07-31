@@ -16,6 +16,7 @@ def fetch_genbankfile(filewgenbankids='ACCESSIONids.txt',
     import os
     import sys
     import time
+    import datetime as dt
     url_template = "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nucleotide&id=%s&rettype=gb&retmode=text"
 
     for id in open(filewgenbankids):
@@ -30,9 +31,12 @@ def fetch_genbankfile(filewgenbankids='ACCESSIONids.txt',
             print "already fetched"
             sleeptime = 0
         else:
+            timeatrequest = dt.datetime.now()
             try:
                 open(gbk_out_file, "w").write(urllib2.urlopen(url_template % id).read())
-                sleeptime = 1.0/3  # Max 3 times pr second!!!
+                timeafterrequest = dt.datetime.now()
+                timeused = (timeafterrequest-timeatrequest).total_seconds()
+                sleeptime = max(0,1.0/3-timeused)  # Max 3 times pr second!!!
             except Exception:
                 pass
         print "Done"
